@@ -67,3 +67,28 @@ dependencies {
 }
 
 apply from: '../release-aar.gradle'
+
+// plugins {
+//     id 'maven-publish'
+// }
+// publishing {
+//     repositories {
+//         maven {
+//             name = "GitHubPackages"
+//             url = uri("https://maven.pkg.github.com/charizardavi/FTCLib")
+//             credentials {
+//                 username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME")
+//                 password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+//             }
+//         }
+//     }
+//     publications {
+//         gpr(MavenPublication) {
+//             groupId = 'org.group'
+//             artifactId = 'artifact'
+//             version = '0.1'
+
+//             from(components.java)
+//         }
+//     }
+// }

@@ -15,7 +15,10 @@ public class GamepadEx {
     /**
      * The retrievable gamepad object
      */
+
     public Gamepad gamepad;
+
+    private double triggerThreshold = .2;
 
     private HashMap<Button, ButtonReader> buttonReaders;
     private HashMap<Button, GamepadButton> gamepadButtons;
@@ -24,6 +27,7 @@ public class GamepadEx {
             Button.Y, Button.X, Button.A, Button.B, Button.LEFT_BUMPER, Button.RIGHT_BUMPER, Button.BACK,
             Button.START, Button.DPAD_UP, Button.DPAD_DOWN, Button.DPAD_LEFT, Button.DPAD_RIGHT,
             Button.LEFT_STICK_BUTTON, Button.RIGHT_STICK_BUTTON
+            // Button.LEFT_TRIGGER, Button.RIGHT_TRIGGER
     };
 
     /**
@@ -91,6 +95,12 @@ public class GamepadEx {
             case RIGHT_STICK_BUTTON:
                 buttonValue = gamepad.right_stick_button;
                 break;
+//            case LEFT_TRIGGER:
+//                buttonValue = gamepad.left_trigger > triggerThreshold;
+//                break;
+//            case RIGHT_TRIGGER:
+//                buttonValue = gamepad.right_trigger > triggerThreshold;
+//                break;
             default:
                 buttonValue = false;
                 break;
